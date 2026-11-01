@@ -1,0 +1,234 @@
+/* --- CONFIGURACIÓN GENERAL Y ESTILOS BASE --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #e5e5e5;
+    font-family: Arial, sans-serif;
+}
+
+.pagina {
+    width: 90%;
+    max-width: 1150px;
+    min-height: 100vh;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Fondos */
+.portada {
+    background: #2e7d32;
+    color: white;
+}
+
+.Reproductor {
+    text-align: center;
+}
+
+.tipos-indice {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.comun {
+    text-align: left;
+    ;
+}
+
+.raro {
+    text-align: center;
+    
+}
+
+.especial{
+    text-align: right;
+   
+}
+
+
+
+.pagina {
+    background-image: url(/Imagenes/Fondos/FONDO.png) , url(/Imagenes/Fondos/FONDO2.png) ;
+background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, 50% 100% ;
+background-position: left center, right center;
+}
+
+.plantas {
+    background-image: url("/Imagenes/Fondos/FONDO.png");
+    background-size: 100% 100%;
+}
+
+.zombis {
+    background-image: url("/Imagenes/Fondos/FONDO2.png");
+    background-size: 100% 100%;
+}
+
+.especiales {
+    background-image: url("/Imagenes/Fondos/FONDO3.png");
+    background-size: 100% 100%;
+}
+
+.jefes {
+    background: #ff6b6b;
+}
+
+/*Ranuras*/
+.figura {
+    background: blue;
+    border: 3px dashed black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.Yavienen {
+    text-align: center;
+}
+
+/*Borde punteado grueso para las figuras más raras/
+.borde-grueso {
+    border: 8px dotted black;
+}
+
+
+/* DISEÑO DE LAS CUADRÍCULAS (GRIDS) --- */
+
+/* 1. Página de Personajes del Álbum */
+.grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.grid-personajes .figura {
+    height: 160px;
+    border-style:solid
+}
+.grid-personajes .ancho {
+    grid-column: span 2;
+    height: 190px;
+    border-style:dashed
+}
+
+/* 2. Formato Doble Página (Libro Abierto) para Plantas y Zombis */
+.album-doble {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* Línea divisoria central del libro */
+.album-doble::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hoja {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-items: center;
+    justify-items: center;
+}
+
+.col-slots {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Proporciones adaptadas a las hojas del álbum real */
+.hoja .figura {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+}
+.hoja .col-slots[data-slots="2"] .figura {
+    height: 260px;
+    width: 160PX;
+    background-color: grey;
+    border-style: solid;
+}
+.hoja .borde-grueso {
+    height: 260px;
+    width: 160px;
+}
+
+/* 3. Páginas Especiales y de Jefes */
+.grid-especiales {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.grid-especiales .grande {
+    grid-column: span 3;
+    height: 280px;
+    border-style: dotted;
+    background-color: yellow;
+}
+.grid-especiales .figura:not(.grande) {
+    height: 140px;
+}
+
+.grid-jefes {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+.grid-jefes .grande {
+    grid-column: span 4;
+    height: 280px;
+    border-style: dotted;
+    background-color: yellow;
+}
+.grid-jefes .figura:not(.grande) {
+    height: 120px;
+}
+
+
+/* --- BOTONES Y MENÚ DE NAVEGACIÓN --- */
+.nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+}
